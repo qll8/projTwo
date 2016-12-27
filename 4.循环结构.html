@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>循环结构</title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		// 结构：顺序结构、分支结构、循环结构
+		// for循环执行顺序：① ②④③...②④③ ②
+		/*
+		for (①循环增量初始化; ②循环增量条件表达式; ③循环增量变化值) {
+			④循环语句体;
+		}
+		循环外语句体;
+		*/
+		
+		console.log("我爱蓝鸥，蓝鸥万岁！");
+		console.log("我爱蓝鸥，蓝鸥万岁！");
+		console.log("我爱蓝鸥，蓝鸥万岁！");
+		console.log("我爱蓝鸥，蓝鸥万岁！");
+		console.log("我爱蓝鸥，蓝鸥万岁！");
+		
+		for (var i = 0; i < 5; i++) {
+			console.log("哇咔咔" + (i + 1) + "次");
+		}
+		
+		
+		var m = 0;
+		for (var i = 0; i < 3; i++) {
+			m++;
+		}
+//		alert(m);
+
+		// 练习一
+		// 1~5的和
+		var sum = 0;
+		var i = 1;
+		// for ()中的三条语句都可以省略，但在其他相应的地方需要做同等条件处理
+		for(;;) {
+			sum += i;
+			i++;
+			if (i == 5) {
+				// 结束作用域离它最近的循环体
+				break; 
+			}
+		}
+		console.log(sum);
+		
+		
+		// 练习二
+		sum = 0;
+		for (var i = 1; i <= 99; i++) {
+			// i是单数时
+			if (i % 2 == 1) {
+				sum += i;
+			}
+		}
+//		alert(sum);
+		
+		sum = 0;
+		for (var i = 1; i <= 99; i++) {
+			// i是3的倍数时
+			if (i % 3 == 0) {
+				sum += i;
+			}
+		}
+		alert(sum);
+		
+		
+	</script>
+</html>

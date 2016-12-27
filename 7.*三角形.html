@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		var m = prompt();
+		var n = prompt();
+		var t = 1;
+		// 定义死循环（因为不知道循环次数）
+		for (var i = 0; i < 1; ) {
+			t = m % n;
+			m = n;
+			n = t;
+			if (t == 0) {
+				i = 1; // 设置出口
+			}
+		}
+		alert(m);
+	</script>
+</html>

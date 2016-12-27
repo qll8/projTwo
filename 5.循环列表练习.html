@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>循环列表练习</title>
+	</head>
+	<body>
+		<ol id="ol">
+			<li id="li1"></li>
+			<li id="li2"></li>
+			<li id="li3"></li>
+			<li id="li4"></li>
+			<li id="li5"></li>
+			<li id="li6"></li>
+			<li id="li7"></li>
+			<li id="li8"></li>
+			<li id="li9"></li>
+			<li id="li10"></li>
+		</ol>
+	</body>
+	<script type="text/javascript">
+		// ①
+		/*
+		document.write("<ol>");
+		for (var i = 1; i <= 10; i++) {
+			document.write("<li>" + i + "</li>");
+		}
+		document.write("</ol>");
+		*/
+		
+		// ②
+//		var ol = document.getElementById("ol");
+		for (var i = 1; i <= 10; i++) {
+			var li = document.getElementById("li" + i);
+			li.innerHTML = i;
+		}
+		
+		
+		
+		
+	</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>parseInt</title>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript">
+		// ① number：1.0~1.9  ---  1
+		// ② string：1.0~1.9  ---  1
+		// ③ string："string" --- NaN
+		// ④ string："12acb"  ---  12
+		// ⑤ string："acb12"  --- NaN
+		// ⑥ string："12a12"  ---  12
+		var a = "12abc12";
+		var b = parseInt(a);
+		//		document.write(b);
+
+		// ① string："12.12"  ---  12.12
+		// ② string："12.1.1" ---  12.1
+		var c = "12.1.1";
+		var d = parseFloat(c);
+		document.write(d);
+
+		if(NaN == NaN) {
+			alert("相等");
+		} else {
+			alert("不等");
+		}
+		
+		// 如何判断一个被转换的数是否是NaN
+		var x = "12abc";
+		// isNaN()函数判断是否是NaN
+		if(isNaN(parseInt(x))) {
+			alert("非数字");
+		} else {
+			alert("数字");
+		}
+	</script>
+
+</html>
